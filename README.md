@@ -225,6 +225,4 @@ This approach makes the project easier to debug and gives you repeated practice 
 - The frontend folder is ready to be developed into the React client.
 - As the project grows, keep business logic in controllers and avoid placing it directly in routes.
 
-## License
 
-This project is for personal learning and revision purposes unless you decide to add a specific license later.
