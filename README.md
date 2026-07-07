@@ -29,11 +29,6 @@ The frontend folder is present and can be expanded into the React client for the
 
 ### Backend
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- bcryptjs
 - dotenv
 - cors
 - validator
@@ -44,13 +39,12 @@ The frontend folder is present and can be expanded into the React client for the
 - React
 - React Router
 - State management of your choice as the app grows
+JWT_SECRET=your_jwt_secret
 - Fetch API or Axios for API calls
 
 ## Project Structure
-
 ```text
 linkedin/
-├── client/
 ├── server/
 │   ├── app.js
 │   ├── server.js
@@ -105,8 +99,9 @@ Returns a test response for the user route.
 ### Auth Routes
 
 - `POST /api/auth/register`
+- `POST /api/auth/login`
 
-Currently connected to the register controller placeholder.
+These routes now create or verify users and return a JWT for authenticated requests.
 
 ## User Model
 
@@ -127,6 +122,7 @@ Create a `.env` file inside the `server/` folder with the values below:
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
 ```
 
 If you later add authentication tokens, email services, or cloud uploads, you can expand this file with additional keys.
@@ -225,6 +221,4 @@ This approach makes the project easier to debug and gives you repeated practice 
 - The frontend folder is ready to be developed into the React client.
 - As the project grows, keep business logic in controllers and avoid placing it directly in routes.
 
-## License
 
-This project is for personal learning and revision purposes unless you decide to add a specific license later.
